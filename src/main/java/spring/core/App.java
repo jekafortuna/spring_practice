@@ -1,5 +1,7 @@
 package spring.core;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.core.beans.Client;
 import spring.core.loggers.ConsoleEventLogger;
 
@@ -19,11 +21,17 @@ public class App {
     }
 
     public static void main(String[] args) {
-        App app = new App();
+//        App app = new App();
+//
+//        app.client = new Client("2", "John Smith");
+//        app.eventLogger = new ConsoleEventLogger();
 
-        app.client = new Client("2", "John Smith");
-        app.eventLogger = new ConsoleEventLogger();
+//        app.logEvent("Some event for user 1");
 
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+        App app = (App) context.getBean("app");
+
+        app.logEvent("Some event for user 1");
         app.logEvent("Some event for user 2");
     }
 
