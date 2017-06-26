@@ -1,14 +1,14 @@
 package spring.core.loggers;
 
-import spring.core.beans.EventLogger;
+import spring.core.beans.Event;
 
 /**
  * Created by Evgeniy on 23.06.2017.
  */
-public class ConsoleEventLogger implements EventLogger {
+public class ConsoleEventLogger extends AbstractLogger {
 
     @Override
-    public void logEvent(String message) {
-        System.out.println(message);
+    public void logEvent(Event event) {
+        System.out.println(event.toString());
     }
 }
