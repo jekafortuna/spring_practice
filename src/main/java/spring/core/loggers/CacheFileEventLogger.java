@@ -24,12 +24,18 @@ public class CacheFileEventLogger extends FileEventLogger {
         cache.add(event);
 
         if (cache.size() == cacheSize){
-
+            writeEventsFromCache();
             cache.clear();
         }
     }
 
     private void writeEventsFromCache(){
+        cache.stream().forEach(super::logEvent);
+    }
 
+    public void destroy(){
+        if (!cache.isEmpty()){
+            writeEventsFromCache();
+        }
     }
 }

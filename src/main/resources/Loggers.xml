@@ -10,8 +10,9 @@
         <constructor-arg value="txt/events_log.txt"/>
     </bean>
     
-    <bean id="cacheFileEventLogger" class="spring.core.loggers.CacheFileEventLogger">
+    <bean id="cacheFileEventLogger" class="spring.core.loggers.CacheFileEventLogger"
+            destroy-method="destroy" parent="fileEventLogger">
 
-        <constructor-arg value=""/>
+        <constructor-arg index="1" value="5"/>
     </bean>
 </beans>
