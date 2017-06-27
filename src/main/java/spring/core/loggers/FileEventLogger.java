@@ -18,6 +18,15 @@ public class FileEventLogger extends AbstractLogger {
         this.fileName = fileName;
     }
 
+    public void init() throws IOException{
+        this.file = new File(fileName);
+        if (file.exists() && !file.canWrite()){
+            throw new IllegalArgumentException("Can't write to file " + fileName);
+        } else if (!file.exists()){
+            file.createNewFile();
+        }
+    }
+
     @Override
     public void logEvent(Event event) {
         try {
