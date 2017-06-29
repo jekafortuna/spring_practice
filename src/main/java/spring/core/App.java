@@ -4,7 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.core.beans.Client;
+import spring.core.beans.Event;
 import spring.core.loggers.ConsoleEventLogger;
+import spring.core.loggers.EventLogger;
 
 /**
  * Created by Evgeniy on 23.06.2017.
@@ -30,14 +32,20 @@ public class App {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml", "Loggers.xml");
         App app = (App) context.getBean("app");
 
-        app.logEvent("Some event for user 1");
-        app.logEvent("Some event for user 2");
+//        app.logEvent("Some event for user 2");
 
+        app.logEvents(context);
         context.close();
     }
 
-    private void logEvent(String msg){
+    public void logEvents(ApplicationContext context){
+        Event event = context.getBean(Event.class);
+        logEvent(event, "Some event for user 2");
+    }
+
+    private void logEvent(Event event, String msg){
         String message = msg.replaceAll(client.getId(), client.getFullName());
-//        eventLogger.logEvent(message);
+        event.setMsg(message);
+        eventLogger.logEvent(event);
     }
 }

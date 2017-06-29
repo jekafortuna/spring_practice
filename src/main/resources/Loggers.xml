@@ -7,12 +7,11 @@
 
     <bean id="fileEventLogger" class="spring.core.loggers.FileEventLogger"
         init-method="init">
-        <constructor-arg value="txt/events_log.txt"/>
+        <constructor-arg value="src/txt/events_log.txt"/>
     </bean>
     
     <bean id="cacheFileEventLogger" class="spring.core.loggers.CacheFileEventLogger"
             destroy-method="destroy" parent="fileEventLogger">
-
         <constructor-arg index="1" value="5"/>
     </bean>
 </beans>
