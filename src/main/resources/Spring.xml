@@ -5,6 +5,8 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd" >
 
+    <import resource="Loggers.xml"/>
+
     <bean id="client" class="spring.core.beans.Client">
         <!--<constructor-arg value="1"/>-->
         <!--<constructor-arg value="John Smith"/>-->
@@ -12,8 +14,6 @@
         <constructor-arg value="2"/>
         <constructor-arg value="Steven Gerrard"/>
     </bean>
-
-    <bean id="eventLogger" class="spring.core.loggers.ConsoleEventLogger"/>
 
     <bean id="event" class="spring.core.beans.Event" scope="prototype">
         <constructor-arg>

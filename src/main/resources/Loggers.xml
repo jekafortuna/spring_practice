@@ -5,6 +5,8 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd" >
 
+    <bean id="eventLogger" class="spring.core.loggers.ConsoleEventLogger"/>
+
     <bean id="fileEventLogger" class="spring.core.loggers.FileEventLogger"
         init-method="init">
         <constructor-arg value="src/txt/events_log.txt"/>
