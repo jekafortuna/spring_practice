@@ -11,9 +11,20 @@
         init-method="init">
         <constructor-arg value="src/txt/events_log.txt"/>
     </bean>
+
+    <bean id="consoleEventLogger" class="spring.core.loggers.ConsoleEventLogger"/>
     
     <bean id="cacheFileEventLogger" class="spring.core.loggers.CacheFileEventLogger"
             destroy-method="destroy" parent="fileEventLogger">
         <constructor-arg index="1" value="5"/>
+    </bean>
+
+    <bean id="combinedEventLogger" class="spring.core.loggers.CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleEventLogger"/>
+                <ref bean="fileEventLogger"/>
+            </list>
+        </constructor-arg>
     </bean>
 </beans>
