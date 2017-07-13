@@ -5,22 +5,27 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.core.beans.Client;
 import spring.core.beans.Event;
+import spring.core.beans.EventType;
 import spring.core.loggers.ConsoleEventLogger;
 import spring.core.loggers.EventLogger;
+
+import java.util.Map;
 
 /**
  * Created by Evgeniy on 23.06.2017.
  */
 public class App {
     private Client client;
-    private ConsoleEventLogger eventLogger;
+    private EventLogger defaultLogger;
+    private Map<EventType, EventLogger> loggers;
+//    private ConsoleEventLogger eventLogger;
 
-    public App() {
-    }
+    public App() {}
 
-    public App(Client client, ConsoleEventLogger eventLogger) {
+    public App(Client client, EventLogger eventLogger, Map<EventType, EventLogger> loggers) {
         this.client = client;
-        this.eventLogger = eventLogger;
+        this.defaultLogger = eventLogger;
+        this.loggers = loggers;
     }
 
     public static void main(String[] args) {
@@ -40,12 +45,26 @@ public class App {
 
     public void logEvents(ApplicationContext context){
         Event event = context.getBean(Event.class);
-        logEvent(event, "Some event for user 2");
+        logEvent(EventType.INFO, event, "Some event for user 2");
+
+        event = context.getBean(Event.class);
+        logEvent(EventType.ERROR, event, "Some event for 1");
     }
 
-    private void logEvent(Event event, String msg){
+//    private void logEvent(Event event, String msg){
+//        String message = msg.replaceAll(client.getId(), client.getFullName());
+//        event.setMsg(message);
+//        eventLogger.logEvent(event);
+//    }
+
+    private void logEvent(EventType type, Event event, String msg){
         String message = msg.replaceAll(client.getId(), client.getFullName());
         event.setMsg(message);
-        eventLogger.logEvent(event);
+
+        EventLogger logger = loggers.get(type);
+        if (logger == null){
+            logger = defaultLogger;
+        }
+        logger.logEvent(event);
     }
 }
