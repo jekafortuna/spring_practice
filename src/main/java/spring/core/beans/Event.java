@@ -5,6 +5,7 @@ import java.util.Date;
 
 /**
  * Created by Evgeniy on 24.06.2017.
+ * Event class of application
  */
 public class Event {
     private int id;

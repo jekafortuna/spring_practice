@@ -8,16 +8,26 @@ import java.io.IOException;
 
 /**
  * Created by Evgeniy on 24.06.2017.
+ * File event logger class
  */
 public class FileEventLogger extends AbstractLogger {
-
+    /**
+     * name of file for logging
+     */
     private String fileName;
+    /**
+     * file for logging
+     */
     private File file;
 
     public FileEventLogger(String fileName) {
         this.fileName = fileName;
     }
 
+    /**
+     * checks existing of file for logging. Otherwise creates this file
+     * @throws IOException
+     */
     public void init() throws IOException{
         this.file = new File(fileName);
         if (file.exists() && !file.canWrite()){
@@ -27,6 +37,10 @@ public class FileEventLogger extends AbstractLogger {
         }
     }
 
+    /**
+     * logging event into file
+     * @param event
+     */
     @Override
     public void logEvent(Event event) {
         try {

@@ -2,10 +2,20 @@ package spring.core.beans;
 
 /**
  * Created by Evgeniy on 23.06.2017.
+ * Client class of application
  */
 public class Client {
+    /**
+     * id of client
+     */
     private String id;
+    /**
+     * full name of client
+     */
     private String fullName;
+    /**
+     * greeting of client
+     */
     private String greeting;
 
     public Client() {

@@ -6,19 +6,27 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.core.beans.Client;
 import spring.core.beans.Event;
 import spring.core.beans.EventType;
-import spring.core.loggers.ConsoleEventLogger;
 import spring.core.loggers.EventLogger;
 
 import java.util.Map;
 
 /**
  * Created by Evgeniy on 23.06.2017.
+ * Main class of application
  */
 public class App {
+    /**
+     * Client unit
+     */
     private Client client;
+    /**
+     * Default event logger
+     */
     private EventLogger defaultLogger;
+    /**
+     * Map of loggers with their types
+     */
     private Map<EventType, EventLogger> loggers;
-//    private ConsoleEventLogger eventLogger;
 
     public App() {}
 
@@ -29,15 +37,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-//        App app = new App();
-//        app.client = new Client("2", "John Smith");
-//        app.eventLogger = new ConsoleEventLogger();
-//        app.logEvent("Some event for user 1");
 
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml", "Loggers.xml");
         App app = (App) context.getBean("app");
-
-//        app.logEvent("Some event for user 2");
 
         app.logEvents(context);
         context.close();
@@ -46,6 +48,9 @@ public class App {
     public void logEvents(ApplicationContext context){
         Event event = context.getBean(Event.class);
         logEvent(EventType.INFO, event, "Some event for user 2");
+
+        event = context.getBean(Event.class);
+        logEvent(EventType.ERROR, event, "Some event for user 2");
 
         event = context.getBean(Event.class);
         logEvent(EventType.ERROR, event, "Some event for 1");

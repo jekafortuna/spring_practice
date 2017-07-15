@@ -1,1 +1,2 @@
-Event {id = 0, msg = 'Some event for 1', date = Thu Jul 13 17:40:47 EEST 2017, dateFormat = 13.07.2017 17:40:47}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
+Event {id = 0, msg = 'Some event for 1', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
