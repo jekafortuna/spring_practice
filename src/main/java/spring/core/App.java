@@ -54,13 +54,10 @@ public class App {
 
         event = context.getBean(Event.class);
         logEvent(EventType.ERROR, event, "Some event for 1");
-    }
 
-//    private void logEvent(Event event, String msg){
-//        String message = msg.replaceAll(client.getId(), client.getFullName());
-//        event.setMsg(message);
-//        eventLogger.logEvent(event);
-//    }
+        event = context.getBean(Event.class);
+        logEvent(null, event, "Null event");
+    }
 
     private void logEvent(EventType type, Event event, String msg){
         String message = msg.replaceAll(client.getId(), client.getFullName());

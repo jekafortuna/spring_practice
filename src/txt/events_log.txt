@@ -1,2 +1,8 @@
 Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
 Event {id = 0, msg = 'Some event for 1', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 15:17:20 EEST 2017, dateFormat = 17.07.2017 15:17:20}
+Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 15:17:20 EEST 2017, dateFormat = 17.07.2017 15:17:20}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 15:34:28 EEST 2017, dateFormat = 17.07.2017 15:34:28}
+Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 15:34:28 EEST 2017, dateFormat = 17.07.2017 15:34:28}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 18:27:45 EEST 2017, dateFormat = 17.07.2017 18:27:45}
+Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 18:27:45 EEST 2017, dateFormat = 17.07.2017 18:27:45}
