@@ -1,6 +1,7 @@
 package spring.core.beans;
 
 import java.text.DateFormat;
+import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -8,6 +9,18 @@ import java.util.Date;
  * Event class of application
  */
 public class Event {
+
+    /**
+     * method checks if there is day or night now
+     * @param start
+     * @param end
+     * @return true - if day, false - if night
+     */
+    public static boolean isDay(int start, int end){
+        LocalTime time = LocalTime.now();
+        return time.getHour() > start && time.getHour() < end;
+    }
+
     private int id;
     private String msg;
     private Date date;

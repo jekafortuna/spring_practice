@@ -10,3 +10,7 @@ Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Tue Jul 18 17:
 Event {id = 0, msg = 'Some event for 1', date = Tue Jul 18 17:02:30 EEST 2017, dateFormat = 18.07.2017 17:02:30}
 Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Tue Jul 18 17:29:24 EEST 2017, dateFormat = 18.07.2017 17:29:24}
 Event {id = 0, msg = 'Some event for 1', date = Tue Jul 18 17:29:24 EEST 2017, dateFormat = 18.07.2017 17:29:24}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Wed Jul 19 18:06:29 EEST 2017, dateFormat = 19.07.2017 18:06:29}
+Event {id = 0, msg = 'Some event for 1', date = Wed Jul 19 18:06:29 EEST 2017, dateFormat = 19.07.2017 18:06:29}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Wed Jul 19 18:08:21 EEST 2017, dateFormat = 19.07.2017 18:08:21}
+Event {id = 0, msg = 'Some event for 1', date = Wed Jul 19 18:08:21 EEST 2017, dateFormat = 19.07.2017 18:08:21}
