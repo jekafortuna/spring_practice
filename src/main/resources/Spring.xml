@@ -53,9 +53,10 @@
 
     <bean id="app" class="spring.core.App">
         <constructor-arg ref="client"/>
-        <!--<constructor-arg value="#{ T(spring.core.beans.Event).isDay(8, 17) ?-->
-                                    <!--cacheFileEventLogger : consoleEventLogger}"/>-->
-        <constructor-arg ref="eventLogger"/>
+        <constructor-arg value="#{ T(spring.core.beans.Event).isDay(8, 17) ?
+                                    cacheFileEventLogger : consoleEventLogger}"/>
+
+        <!--<constructor-arg ref="eventLogger"/>-->
         <constructor-arg ref="loggerMap"/>
     </bean>
 

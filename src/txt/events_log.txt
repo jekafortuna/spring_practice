@@ -1,16 +1,8 @@
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
-Event {id = 0, msg = 'Some event for 1', date = Sat Jul 15 15:43:49 EEST 2017, dateFormat = 15.07.2017 15:43:49}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 15:17:20 EEST 2017, dateFormat = 17.07.2017 15:17:20}
-Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 15:17:20 EEST 2017, dateFormat = 17.07.2017 15:17:20}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 15:34:28 EEST 2017, dateFormat = 17.07.2017 15:34:28}
-Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 15:34:28 EEST 2017, dateFormat = 17.07.2017 15:34:28}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Mon Jul 17 18:27:45 EEST 2017, dateFormat = 17.07.2017 18:27:45}
-Event {id = 0, msg = 'Some event for 1', date = Mon Jul 17 18:27:45 EEST 2017, dateFormat = 17.07.2017 18:27:45}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Tue Jul 18 17:02:30 EEST 2017, dateFormat = 18.07.2017 17:02:30}
-Event {id = 0, msg = 'Some event for 1', date = Tue Jul 18 17:02:30 EEST 2017, dateFormat = 18.07.2017 17:02:30}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Tue Jul 18 17:29:24 EEST 2017, dateFormat = 18.07.2017 17:29:24}
-Event {id = 0, msg = 'Some event for 1', date = Tue Jul 18 17:29:24 EEST 2017, dateFormat = 18.07.2017 17:29:24}
-Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Wed Jul 19 18:06:29 EEST 2017, dateFormat = 19.07.2017 18:06:29}
-Event {id = 0, msg = 'Some event for 1', date = Wed Jul 19 18:06:29 EEST 2017, dateFormat = 19.07.2017 18:06:29}
 Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Wed Jul 19 18:08:21 EEST 2017, dateFormat = 19.07.2017 18:08:21}
 Event {id = 0, msg = 'Some event for 1', date = Wed Jul 19 18:08:21 EEST 2017, dateFormat = 19.07.2017 18:08:21}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Fri Jul 21 15:41:07 EEST 2017, dateFormat = 21.07.2017 15:41:07}
+Event {id = 0, msg = 'Some event for 1', date = Fri Jul 21 15:41:07 EEST 2017, dateFormat = 21.07.2017 15:41:07}
+Event {id = 0, msg = 'Null event', date = Fri Jul 21 15:41:07 EEST 2017, dateFormat = 21.07.2017 15:41:07}
+Event {id = 0, msg = 'Some event for user Steven Gerrard', date = Fri Jul 21 15:54:25 EEST 2017, dateFormat = 21.07.2017 15:54:25}
+Event {id = 0, msg = 'Some event for 1', date = Fri Jul 21 15:54:25 EEST 2017, dateFormat = 21.07.2017 15:54:25}
+Event {id = 0, msg = 'Null event', date = Fri Jul 21 15:54:25 EEST 2017, dateFormat = 21.07.2017 15:54:25}
